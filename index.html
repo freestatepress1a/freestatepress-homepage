@@ -14,7 +14,6 @@
             background-color: #f9fafb;
         }
         
-        
         h1, h2, h3, h4 {
             font-family: 'Roboto Slab', serif;
         }
@@ -36,260 +35,304 @@
         }
         
         .article-card {
+            border-left: 4px solid #3b82f6;
+        }
+
+        .cta-button {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            background-color: #ffffff;
         }
 
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #3b82f6;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
         }
 
-        .main-article-bg {
-            background-color: #ffffff;
-        }
-
-        .tag-investigation {
-            background-color: #a855f7;
-        }
-        .tag-world {
-            background-color: #f97316;
-        }
-        .tag-politics {
-            background-color: #2dd4bf;
-        }
-        .tag-science {
-            background-color: #6366f1;
-        }
-        .tag-economy {
-            background-color: #eab308;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
-<body class="bg-gray-100">
-
-    <!-- BLOCK START: Header Section -->
-    <header class="header-bg text-white shadow-lg" id="home">
-        <div class="container-padding max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
-            <div class="flex flex-col sm:flex-row items-center mb-4 sm:mb-0">
-                <img src="freestatepressiconiclogo.png" alt="FreeState Press Logo" class="w-16 h-16 mr-4 mb-2 sm:mb-0 rounded-full object-cover">
-                <div class="flex flex-col items-center sm:items-start">
-                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
-                        FreeState Press
-                    </h1>
-                    <p class="mt-1 text-sm sm:text-base text-gray-400">
-                        Your Source for The Inevitable Truth.
-                    </p>
-                </div>
-            </div>
-            <nav class="flex space-x-4 text-sm sm:text-base">
-                <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
-                <a href="#articles" class="nav-link text-gray-300 hover:text-white">World</a>
-                <a href="#articles" class="nav-link text-gray-300 hover:text-white">Politics</a>
-                <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <header class="header-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <!-- Updated the logo placeholder text, colors, and added a patriotic border -->
+                <img src="https://placehold.co/40x40/0A234E/F5F5DC?text=FSP" alt="FreeState Press Logo" class="rounded-full w-10 h-10 object-cover border-2 border-red-600">
+                <h1 class="text-3xl font-bold tracking-tight">FreeState Press</h1>
+            </a>
+            <nav class="mt-4 sm:mt-0">
+                <ul class="flex space-x-6 text-gray-300 font-medium">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">Politics</a></li>
+                    <li><a href="#" class="nav-link">Sports</a></li>
+                    <li><a href="#" class="nav-link">Technology</a></li>
+                    <li><a href="#" class="nav-link">About</a></li>
+                </ul>
             </nav>
         </div>
     </header>
-    <!-- BLOCK END: Header Section -->
 
-    <!-- BLOCK START: Main Content Area -->
-    <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8" id="articles">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- BLOCK START: Main Article Section -->
-            <div class="md:col-span-2 main-article-bg rounded-lg shadow-lg overflow-hidden p-6">
-                <img class="rounded-lg w-full h-auto object-cover mb-6" src="https://placehold.co/1200x600/1e293b/a5b4fc?text=Featured+Article" alt="Featured Article Image">
-                <span class="inline-block tag-investigation text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">INVESTIGATION</span>
-                <h2 class="text-3xl font-bold text-gray-900 leading-tight mb-4">
-                    The Silent Coup: How Corporate Power is Corrupting Our Republic
-                </h2>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <a href="#" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
-            </div>
-            <!-- BLOCK END: Main Article Section -->
-
-            <!-- BLOCK START: Sidebar Section -->
-            <div class="md:col-span-1">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Trending Now</h3>
-                    <ul class="space-y-4">
-                        <li class="border-b pb-4">
-                            <a href="#" class="text-gray-800 hover:text-blue-600 transition-colors">
-                                <h4 class="font-semibold">The Global Energy Shift: Winners and Losers</h4>
-                                <p class="text-sm text-gray-500 mt-1">10 hours ago</p>
-                            </a>
-                        </li>
-                        <li class="border-b pb-4">
-                            <a href="#" class="text-gray-800 hover:text-blue-600 transition-colors">
-                                <h4 class="font-semibold">The Future of AI: A New Renaissance or a Dystopian Nightmare?</h4>
-                                <p class="text-sm text-gray-500 mt-1">2 days ago</p>
-                            </a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#" class="text-gray-800 hover:text-blue-600 transition-colors">
-                                <h4 class="font-semibold">Unraveling the Mystery of the Lost Ancient City</h4>
-                                <p class="text-sm text-gray-500 mt-1">5 days ago</p>
-                            </a>
-                        </li>
-                    </ul>
+    <main class="container mx-auto px-4 py-8 flex-grow grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Article Section -->
+        <section class="lg:col-span-2">
+            <div id="hero-article" class="bg-white rounded-xl shadow-lg p-6 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+                <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=News" alt="Hero Article Image" class="w-full md:w-1/2 rounded-lg object-cover">
+                <div class="flex flex-col space-y-2">
+                    <h2 class="text-3xl font-bold text-gray-900 leading-tight">Breaking: New Legislation to Impact Local Businesses</h2>
+                    <p class="text-gray-500 font-medium text-sm">By Jane Doe - October 26, 2023</p>
+                    <p class="text-gray-600 leading-relaxed">Local authorities are considering a new bill aimed at regulating small businesses. Experts weigh in on the potential effects on the local economy and community.</p>
+                    <a href="#" class="text-blue-600 font-medium hover:underline">Read Full Article &rarr;</a>
                 </div>
             </div>
-            <!-- BLOCK END: Sidebar Section -->
-        </div>
 
-        <!-- BLOCK START: Latest Articles Grid -->
-        <div class="mt-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Latest Articles</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="latest-articles-grid">
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Latest Articles</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Article Card 1 -->
-                <div class="article-card rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/a855f7/f8fafc?text=Politics" alt="Article Image">
-                    <div class="p-6">
-                        <span class="inline-block tag-politics text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">POLITICS</span>
-                        <h3 class="text-xl font-bold text-gray-800 leading-tight mb-2">
-                            The Great Divide: A Nation at a Crossroads
-                        </h3>
-                        <p class="text-sm text-gray-600 leading-normal mb-4">
-                            Examining the deep political and social divides that are shaping the nation's future.
-                        </p>
-                        <a href="#" class="text-blue-600 hover:underline font-semibold text-sm">Read More &rarr;</a>
-                    </div>
+                <div class="bg-white rounded-xl shadow p-5 article-card">
+                    <h4 class="text-xl font-bold text-gray-900">The Rise of Remote Work: A New Era for Offices</h4>
+                    <p class="text-gray-500 text-sm mt-1">October 25, 2023</p>
+                <p class="text-gray-600 mt-3">As companies embrace flexible work models, the traditional office space is undergoing a significant transformation. What does the future hold for corporate real estate?</p>
                 </div>
-
                 <!-- Article Card 2 -->
-                <div class="article-card rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/f97316/f8fafc?text=Science" alt="Article Image">
-                    <div class="p-6">
-                        <span class="inline-block tag-science text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">SCIENCE</span>
-                        <h3 class="text-xl font-bold text-gray-800 leading-tight mb-2">
-                            Breakthrough in Quantum Computing
-                        </h3>
-                        <p class="text-sm text-gray-600 leading-normal mb-4">
-                            Scientists have made a major discovery that could revolutionize technology as we know it.
-                        </p>
-                        <a href="#" class="text-blue-600 hover:underline font-semibold text-sm">Read More &rarr;</a>
-                    </div>
+                <div class="bg-white rounded-xl shadow p-5 article-card">
+                    <h4 class="text-xl font-bold text-gray-900">AI in Medicine: Revolutionizing Diagnostics</h4>
+                    <p class="text-gray-500 text-sm mt-1">October 24, 2023</p>
+                    <p class="text-gray-600 mt-3">Artificial intelligence is proving to be a game-changer in healthcare, with new systems able to analyze medical images with unprecedented accuracy.</p>
                 </div>
-
-                <!-- Article Card 3 -->
-                <div class="article-card rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/2dd4bf/f8fafc?text=Economy" alt="Article Image">
-                    <div class="p-6">
-                        <span class="inline-block tag-economy text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">ECONOMY</span>
-                        <h3 class="text-xl font-bold text-gray-800 leading-tight mb-2">
-                            The New Global Financial Order
-                        </h3>
-                        <p class="text-sm text-gray-600 leading-normal mb-4">
-                            An in-depth analysis of the factors reshaping the global economic landscape.
-                        </p>
-                        <a href="#" class="text-blue-600 hover:underline font-semibold text-sm">Read More &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- BLOCK START: Gemini-powered Article Generator Card -->
-                <div id="gemini-card" class="article-card rounded-lg overflow-hidden flex flex-col items-center justify-center p-6 text-center">
-                    <h3 class="text-xl font-bold text-gray-800 leading-tight mb-4">
-                        Generate a New Article with Gemini AI ✨
-                    </h3>
-                    <p class="text-sm text-gray-600 mb-4">
-                        Enter a topic below to generate a new article headline and summary.
-                    </p>
-                    <input type="text" id="article-prompt" class="w-full p-2 mb-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., The rise of sustainable fashion">
-                    <button id="generate-btn" class="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-                        Generate Article ✨
-                    </button>
-                    <div id="loading-spinner" class="mt-4 hidden">
-                        <svg class="animate-spin h-8 w-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <!-- BLOCK END: Gemini-powered Article Generator Card -->
             </div>
-        </div>
-    </main>
-    <!-- BLOCK END: Main Content Area -->
+        </section>
 
-    <!-- BLOCK START: Footer Section -->
-    <footer class="bg-gray-800 text-gray-400 py-6 mt-12" id="contact">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 FreeState Press. All rights reserved.</p>
+        <!-- Right Sidebar Section -->
+        <aside class="lg:col-span-1">
+            <!-- Article Generator Section -->
+            <section class="bg-gray-100 p-6 rounded-xl shadow-inner">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Article Generator</h3>
+                <p class="text-gray-600 mb-4">Enter a topic below to generate a new article with AI.</p>
+                <form id="generate-article-form" class="space-y-4">
+                    <div>
+                        <label for="topic-input" class="sr-only">Enter Topic</label>
+                        <input type="text" id="topic-input" placeholder="e.g., The Future of Electric Cars" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                    </div>
+                    <button type="submit" id="generate-article-button" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md cta-button">Generate Article</button>
+                    <div id="loading-spinner" class="hidden flex justify-center mt-4">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Generated Content Section -->
+            <section id="generated-content" class="hidden mt-8">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 id="generated-headline" class="text-2xl font-bold text-gray-900 mb-2"></h3>
+                    <p id="generated-summary" class="text-gray-600 leading-relaxed"></p>
+                    <div class="mt-4 flex justify-end">
+                        <button id="save-article-button" class="bg-green-500 text-white font-bold py-2 px-4 rounded-md cta-button">Save Article</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- User ID and Saved Articles Section -->
+            <section class="mt-8 bg-gray-100 p-6 rounded-xl shadow-inner">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">My Saved Articles</h3>
+                <p class="text-gray-600 mb-4 text-sm">
+                    Your User ID: <span id="userIdDisplay" class="font-mono text-xs text-gray-500 break-all">Loading...</span>
+                </p>
+                <div id="saved-articles-list" class="space-y-4">
+                    <!-- Saved articles will be rendered here dynamically -->
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-6 mt-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 FreeState Press. All rights reserved.</p>
         </div>
     </footer>
-    <!-- BLOCK END: Footer Section -->
 
-</body>
+    <!-- BLOCK START: JavaScript Section -->
+    <script type="module">
+    // Firebase imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, doc, getDoc, addDoc, onSnapshot, collection, query, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-<!-- BLOCK START: JavaScript Section -->
-<script>
+    // --- Firebase Setup ---
+    // The following global variables are provided by the canvas environment.
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+    const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+    let app, auth, db;
+    let userId = null;
+
+    // Initialize Firebase and handle authentication
+    const initializeFirebase = async () => {
+        try {
+            app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+
+            // Listen for auth state changes
+            onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    userId = user.uid;
+                    document.getElementById('userIdDisplay').textContent = userId;
+                    // Listen for real-time article updates after successful sign-in
+                    setupArticleListener();
+                } else {
+                    document.getElementById('userIdDisplay').textContent = 'Signed Out';
+                }
+            });
+
+            // Sign in with the custom token or anonymously if no token is available
+            if (initialAuthToken) {
+                await signInWithCustomToken(auth, initialAuthToken);
+            } else {
+                await signInAnonymously(auth);
+            }
+        } catch (error) {
+            console.error("Error initializing Firebase:", error);
+            document.getElementById('userIdDisplay').textContent = 'Error';
+        }
+    };
+    
+    // Call the initialization function
+    initializeFirebase();
+
+    // --- Firestore Operations ---
+    // Firestore path for user-specific data
+    const getUserArticlesCollection = (userId) => {
+        const path = `/artifacts/${appId}/users/${userId}/articles`;
+        return collection(db, path);
+    };
+
+    // Save a generated article to Firestore
+    const saveArticle = async (headline, content) => {
+        if (!userId) {
+            console.error("User not authenticated. Cannot save article.");
+            return;
+        }
+
+        try {
+            const docRef = await addDoc(getUserArticlesCollection(userId), {
+                headline: headline,
+                content: content,
+                createdAt: serverTimestamp()
+            });
+            console.log("Article saved with ID: ", docRef.id);
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+    };
+
+    // Set up a real-time listener for the user's articles
+    const setupArticleListener = () => {
+        if (!userId) return;
+
+        const q = query(getUserArticlesCollection(userId));
+        onSnapshot(q, (snapshot) => {
+            const articlesList = document.getElementById('saved-articles-list');
+            articlesList.innerHTML = ''; // Clear existing list
+
+            if (snapshot.empty) {
+                articlesList.innerHTML = '<p class="text-gray-500">No saved articles yet.</p>';
+            } else {
+                snapshot.forEach((doc) => {
+                    const article = doc.data();
+                    const articleCard = `
+                        <div class="bg-white rounded-lg shadow p-4 border-l-4 border-blue-400">
+                            <h4 class="font-bold text-lg text-gray-800">${article.headline}</h4>
+                            <p class="text-sm text-gray-500 mt-1">${article.createdAt?.toDate().toLocaleDateString() || 'Just now'}</p>
+                            <p class="text-gray-600 mt-2 line-clamp-2">${article.content}</p>
+                            <button class="view-article-button text-blue-600 mt-2 hover:underline text-sm" data-id="${doc.id}">Read More</button>
+                        </div>
+                    `;
+                    articlesList.innerHTML += articleCard;
+                });
+
+                // Attach click listeners to the "Read More" buttons
+                articlesList.querySelectorAll('.view-article-button').forEach(button => {
+                    button.addEventListener('click', async (e) => {
+                        const articleId = e.target.dataset.id;
+                        const docRef = doc(db, `artifacts/${appId}/users/${userId}/articles`, articleId);
+                        const docSnap = await getDoc(docRef);
+
+                        if (docSnap.exists()) {
+                            const article = docSnap.data();
+                            document.getElementById('generated-content').classList.remove('hidden');
+                            document.getElementById('generated-headline').textContent = article.headline;
+                            document.getElementById('generated-summary').textContent = article.content;
+                            document.getElementById('save-article-button').style.display = 'none'; // Hide the save button for loaded articles
+                        } else {
+                            console.error("No such document!");
+                        }
+                    });
+                });
+            }
+        });
+    };
+    
+    // --- API and UI Logic ---
     document.addEventListener('DOMContentLoaded', () => {
-        const generateBtn = document.getElementById('generate-btn');
-        const articlePromptInput = document.getElementById('article-prompt');
+        const generateForm = document.getElementById('generate-article-form');
+        const topicInput = document.getElementById('topic-input');
+        const generateButton = document.getElementById('generate-article-button');
         const loadingSpinner = document.getElementById('loading-spinner');
-        const latestArticlesGrid = document.getElementById('latest-articles-grid');
-        const geminiCard = document.getElementById('gemini-card');
+        const generatedContent = document.getElementById('generated-content');
+        const generatedHeadline = document.getElementById('generated-headline');
+        const generatedSummary = document.getElementById('generated-summary');
+        const saveArticleButton = document.getElementById('save-article-button');
 
-        const apiKey = "AIzaSyA4lNwNMrcxKnuSNz67IHXF2fCnxe0UYYo";
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+        // Handle the save button click
+        saveArticleButton.addEventListener('click', () => {
+            const headline = generatedHeadline.textContent;
+            const content = generatedSummary.textContent;
+            saveArticle(headline, content);
+            saveArticleButton.style.display = 'none'; // Hide the button after saving
+        });
 
-        const createArticleCard = (headline, summary) => {
-            const newCard = document.createElement('div');
-            newCard.className = 'article-card rounded-lg overflow-hidden';
-            newCard.innerHTML = `
-                <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/6366f1/f8fafc?text=AI" alt="AI Generated Article Image">
-                <div class="p-6">
-                    <span class="inline-block tag-science text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">AI-GENERATED</span>
-                    <h3 class="text-xl font-bold text-gray-800 leading-tight mb-2">
-                        ${headline}
-                    </h3>
-                    <p class="text-sm text-gray-600 leading-normal mb-4">
-                        ${summary}
-                    </p>
-                    <a href="#" class="text-blue-600 hover:underline font-semibold text-sm">Read More &rarr;</a>
-                </div>
-            `;
-            latestArticlesGrid.insertBefore(newCard, geminiCard);
-        };
-
-        generateBtn.addEventListener('click', async () => {
-            const userPrompt = articlePromptInput.value.trim();
-            if (!userPrompt) {
-                console.error('Please enter a topic to generate an article.');
+        generateForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const topic = topicInput.value.trim();
+            if (!topic) {
+                alert("Please enter a topic to generate an article.");
                 return;
             }
 
             loadingSpinner.classList.remove('hidden');
-            generateBtn.disabled = true;
+            generatedContent.classList.add('hidden');
+            generatedHeadline.textContent = '';
+            generatedSummary.textContent = '';
+            saveArticleButton.style.display = 'none';
 
-            const systemPrompt = "You are a world-class journalist. Given a topic, generate a catchy, concise headline (10 words max) and a single-paragraph summary (50 words max) of an article. The summary should be informative and engaging. Provide the response as a JSON object with 'headline' and 'summary' keys.";
-            
+            const systemPrompt = `Act as a world-class investigative journalist for FreeState Press. Your task is to write a detailed, multi-paragraph news article based on the user's prompt. The article should be well-structured with a catchy headline, an introduction, and several body paragraphs.`;
+            const userQuery = `Write a comprehensive news article about: "${topic}".`;
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
             const payload = {
-                contents: [{ parts: [{ text: `Generate a headline and summary for an article about: ${userPrompt}` }] }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                },
-                generationConfig: {
-                    responseMimeType: "application/json",
-                    responseSchema: {
-                        type: "OBJECT",
-                        properties: {
-                            "headline": { "type": "STRING" },
-                            "summary": { "type": "STRING" }
-                        },
-                        "propertyOrdering": ["headline", "summary"]
-                    }
-                }
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
             };
 
-            let retries = 0;
-            const maxRetries = 5;
-            const delay = (ms) => new Promise(res => setTimeout(res, ms));
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            const maxRetries = 3;
 
-            const callApi = async () => {
+            const callApi = async (retries = 0) => {
                 try {
                     const response = await fetch(apiUrl, {
                         method: 'POST',
@@ -299,10 +342,10 @@
 
                     if (!response.ok) {
                         if (response.status === 429 && retries < maxRetries) {
-                            retries++;
+                            console.warn(`Rate limit hit, retrying in ${retries + 1}s...`);
                             const backoffTime = Math.pow(2, retries) * 1000;
                             await delay(backoffTime);
-                            return callApi();
+                            return callApi(retries + 1);
                         }
                         throw new Error(`API call failed with status: ${response.status}`);
                     }
@@ -311,23 +354,28 @@
                     const candidate = result.candidates?.[0];
 
                     if (candidate && candidate.content?.parts?.[0]?.text) {
-                        const jsonText = candidate.content.parts[0].text;
-                        const data = JSON.parse(jsonText);
-                        createArticleCard(data.headline, data.summary);
+                        const fullArticleText = candidate.content.parts[0].text;
+                        const lines = fullArticleText.split('\n').filter(line => line.trim() !== '');
+
+                        // The first line is the headline, the rest is the content
+                        const headline = lines[0];
+                        const content = lines.slice(1).join('\n\n');
+                        
+                        generatedHeadline.textContent = headline;
+                        generatedSummary.textContent = content;
+                        generatedContent.classList.remove('hidden');
+                        saveArticleButton.style.display = 'block';
+
                     } else {
                         throw new Error('Invalid API response format.');
                     }
                 } catch (error) {
                     console.error('Error:', error);
-                    // Instead of a card, we will show a temporary error message
-                    const errorCard = document.createElement('div');
-                    errorCard.textContent = "Error generating content. Please try again.";
-                    errorCard.className = "text-center text-red-500 font-semibold mt-4";
-                    latestArticlesGrid.insertBefore(errorCard, geminiCard);
-                    setTimeout(() => errorCard.remove(), 5000); // Remove after 5 seconds
+                    generatedHeadline.textContent = 'Error generating content.';
+                    generatedSummary.textContent = 'Please try again.';
+                    generatedContent.classList.remove('hidden');
                 } finally {
                     loadingSpinner.classList.add('hidden');
-                    generateBtn.disabled = false;
                 }
             };
             
