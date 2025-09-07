@@ -70,28 +70,31 @@
 <body class="bg-gray-100">
 
     <!-- BLOCK START: Header Section -->
-    <header class="header-bg text-white shadow-lg">
+    <header class="header-bg text-white shadow-lg" id="home">
         <div class="container-padding max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
-            <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
-                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
-                    FreeState Press
-                </h1>
-                <p class="mt-1 text-sm sm:text-base text-gray-400">
-                    Your Source for The Inevitable Truth.
-                </p>
+            <div class="flex flex-col sm:flex-row items-center mb-4 sm:mb-0">
+                <img src="freestatepressiconiclogo.jpg" alt="FreeState Press Logo" class="w-16 h-16 mr-4 mb-2 sm:mb-0 rounded-full object-cover">
+                <div class="flex flex-col items-center sm:items-start">
+                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                        FreeState Press
+                    </h1>
+                    <p class="mt-1 text-sm sm:text-base text-gray-400">
+                        Your Source for The Inevitable Truth.
+                    </p>
+                </div>
             </div>
             <nav class="flex space-x-4 text-sm sm:text-base">
-                <a href="#" class="nav-link text-gray-300 hover:text-white">Home</a>
-                <a href="#" class="nav-link text-gray-300 hover:text-white">World</a>
-                <a href="#" class="nav-link text-gray-300 hover:text-white">Politics</a>
-                <a href="#" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                <a href="#articles" class="nav-link text-gray-300 hover:text-white">World</a>
+                <a href="#articles" class="nav-link text-gray-300 hover:text-white">Politics</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
             </nav>
         </div>
     </header>
     <!-- BLOCK END: Header Section -->
 
     <!-- BLOCK START: Main Content Area -->
-    <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8" id="articles">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             <!-- BLOCK START: Main Article Section -->
@@ -140,7 +143,7 @@
         <!-- BLOCK START: Latest Articles Grid -->
         <div class="mt-12">
             <h2 class="text-3xl font-bold text-gray-800 mb-6">Latest Articles</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="latest-articles-grid">
                 <!-- Article Card 1 -->
                 <div class="article-card rounded-lg overflow-hidden">
                     <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/a855f7/f8fafc?text=Politics" alt="Article Image">
@@ -204,10 +207,6 @@
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                     </div>
-                    <div id="generated-content" class="mt-4 hidden w-full">
-                        <h4 id="generated-headline" class="text-lg font-bold text-gray-800 leading-tight mb-2"></h4>
-                        <p id="generated-summary" class="text-sm text-gray-600 leading-normal mb-4"></p>
-                    </div>
                 </div>
                 <!-- BLOCK END: Gemini-powered Article Generator Card -->
             </div>
@@ -216,7 +215,7 @@
     <!-- BLOCK END: Main Content Area -->
 
     <!-- BLOCK START: Footer Section -->
-    <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
+    <footer class="bg-gray-800 text-gray-400 py-6 mt-12" id="contact">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p>&copy; 2025 FreeState Press. All rights reserved.</p>
         </div>
@@ -231,29 +230,40 @@
         const generateBtn = document.getElementById('generate-btn');
         const articlePromptInput = document.getElementById('article-prompt');
         const loadingSpinner = document.getElementById('loading-spinner');
-        const generatedContent = document.getElementById('generated-content');
-        const generatedHeadline = document.getElementById('generated-headline');
-        const generatedSummary = document.getElementById('generated-summary');
+        const latestArticlesGrid = document.getElementById('latest-articles-grid');
+        const geminiCard = document.getElementById('gemini-card');
 
-        // IMPORTANT: Paste your API key here to enable Gemini AI functionality.
-        // Get your key from Google AI Studio: https://aistudio.google.com/app/apikey
         const apiKey = "AIzaSyA4lNwNMrcxKnuSNz67IHXF2fCnxe0UYYo";
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+        const createArticleCard = (headline, summary) => {
+            const newCard = document.createElement('div');
+            newCard.className = 'article-card rounded-lg overflow-hidden';
+            newCard.innerHTML = `
+                <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/6366f1/f8fafc?text=AI" alt="AI Generated Article Image">
+                <div class="p-6">
+                    <span class="inline-block tag-science text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">AI-GENERATED</span>
+                    <h3 class="text-xl font-bold text-gray-800 leading-tight mb-2">
+                        ${headline}
+                    </h3>
+                    <p class="text-sm text-gray-600 leading-normal mb-4">
+                        ${summary}
+                    </p>
+                    <a href="#" class="text-blue-600 hover:underline font-semibold text-sm">Read More &rarr;</a>
+                </div>
+            `;
+            latestArticlesGrid.insertBefore(newCard, geminiCard);
+        };
 
         generateBtn.addEventListener('click', async () => {
             const userPrompt = articlePromptInput.value.trim();
             if (!userPrompt) {
-                // Replaced alert with console.error as per instruction
                 console.error('Please enter a topic to generate an article.');
-                // Display user-friendly message on the UI
-                generatedHeadline.textContent = 'Please enter a topic.';
-                generatedSummary.textContent = '';
-                generatedContent.classList.remove('hidden');
                 return;
             }
 
             loadingSpinner.classList.remove('hidden');
-            generatedContent.classList.add('hidden');
+            generateBtn.disabled = true;
 
             const systemPrompt = "You are a world-class journalist. Given a topic, generate a catchy, concise headline (10 words max) and a single-paragraph summary (50 words max) of an article. The summary should be informative and engaging. Provide the response as a JSON object with 'headline' and 'summary' keys.";
             
@@ -303,19 +313,21 @@
                     if (candidate && candidate.content?.parts?.[0]?.text) {
                         const jsonText = candidate.content.parts[0].text;
                         const data = JSON.parse(jsonText);
-                        generatedHeadline.textContent = data.headline;
-                        generatedSummary.textContent = data.summary;
-                        generatedContent.classList.remove('hidden');
+                        createArticleCard(data.headline, data.summary);
                     } else {
                         throw new Error('Invalid API response format.');
                     }
                 } catch (error) {
                     console.error('Error:', error);
-                    generatedHeadline.textContent = 'Error generating content.';
-                    generatedSummary.textContent = 'Please try again.';
-                    generatedContent.classList.remove('hidden');
+                    // Instead of a card, we will show a temporary error message
+                    const errorCard = document.createElement('div');
+                    errorCard.textContent = "Error generating content. Please try again.";
+                    errorCard.className = "text-center text-red-500 font-semibold mt-4";
+                    latestArticlesGrid.insertBefore(errorCard, geminiCard);
+                    setTimeout(() => errorCard.remove(), 5000); // Remove after 5 seconds
                 } finally {
                     loadingSpinner.classList.add('hidden');
+                    generateBtn.disabled = false;
                 }
             };
             
