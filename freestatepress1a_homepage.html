@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeState Press</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .header-bg {
+            background-color: #020617;
+        }
+
+        .container-padding {
+            padding: 1.5rem 1rem;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #94a3b8;
+        }
+        
+        .article-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background-color: #ffffff;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-article-bg {
+            background-color: #ffffff;
+        }
+
+        .tag-investigation {
+            background-color: #a855f7;
+        }
+        .tag-world {
+            background-color: #f97316;
+        }
+        .tag-politics {
+            background-color: #2dd4bf;
+        }
+        .tag-science {
+            background-color: #6366f1;
+        }
+        .tag-economy {
+            background-color: #eab308;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- BLOCK START: Header Section -->
+    <header class="header-bg text-white shadow-lg">
+        <div class="container-padding max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+            <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                    FreeState Press
+                </h1>
+                <p class="mt-1 text-sm sm:text-base text-gray-400">
+                    Your Source for The Inevitable Truth.
+                </p>
+            </div>
+            <nav class="flex space-x-4 text-sm sm:text-base">
+                <a href="#" class="nav-link text-gray-300 hover:text-white">Home</a>
+                <a href="#" class="nav-link text-gray-300 hover:text-white">World</a>
+                <a href="#" class="nav-link text-gray-300 hover:text-white">Politics</a>
+                <a href="#" class="nav-link text-gray-300 hover:text-white">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <!-- BLOCK END: Header Section -->
+
+    <!-- BLOCK START: Main Content Area -->
+    <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- BLOCK START: Main Article Section -->
+            <div class="md:col-span-2 main-article-bg rounded-lg shadow-lg overflow-hidden p-6">
+                <img class="rounded-lg w-full h-auto object-cover mb-6" src="https://placehold.co/1200x600/1e293b/a5b4fc?text=Featured+Article" alt="Featured Article Image">
+                <span class="inline-block tag-investigation text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">INVESTIGATION</span>
+                <h2 class="text-3xl font-bold text-gray-900 leading-tight mb-4">
+                    The Silent Coup: How Corporate Power is Corrupting Our Republic
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <a href="#" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+            </div>
+            <!-- BLOCK END: Main Article Section -->
+
+            <!-- BLOCK START: Sidebar Section -->
+            <div class="md:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Trending Now</h3>
+                    <ul class="space-y-4">
+                        <li class="border-b pb-4">
+                            <a href="#" class="text-gray-800 hover:text-blue-600 transition-colors">
+                                <h4 class="font-semibold">The Global Energy Shift: Winners and Losers</h4>
+                                <p class="text-sm text-gray-500 mt-1">10 hours ago</p>
+                            </a>
+                        </li>
+                        <li class="border-b pb-4">
+                            <a href="#" class="text-gray-800 hover:text-blue-600 transition-colors">
+                                <h4 class="font-semibold">The Future of AI: A New Renaissance or a Dystopian Nightmare?</h4>
+                                <p class="text-sm text-gray-500 mt-1">2 days ago</p>
+                            </a>
+                        </li>
+                        <li class="pb-2">
+                            <a href="#" class="text-gray-800 hover:text-blue-600 transition-colors">
+                                <h4 class="font-semibold">Unraveling the Mystery of the Lost Ancient City</h4>
+                                <p class="text-sm text-gray-500 mt-1">5 days ago</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- BLOCK END: Sidebar Section -->
+        </div>
+
+        <!-- BLOCK START: Latest Articles Grid -->
+        <div class="mt-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Latest Articles</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1 -->
+                <div class="article-card rounded-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/a855f7/f8fafc?text=Politics" alt="Article Image">
+                    <div class="p-6">
+                        <span class="inline-block tag-politics text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">POLITICS</span>
+                        <h3 class="text-xl font-bold text-gray-800 leading-tight mb-2">
+                            The Great Divide: A Nation at a Crossroads
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-normal mb-4">
+                            Examining the deep political and social divides that are shaping the nation's future.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:underline font-semibold text-sm">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 2 -->
+                <div class="article-card rounded-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/f97316/f8fafc?text=Science" alt="Article Image">
+                    <div class="p-6">
+                        <span class="inline-block tag-science text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">SCIENCE</span>
+                        <h3 class="text-xl font-bold text-gray-800 leading-tight mb-2">
+                            Breakthrough in Quantum Computing
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-normal mb-4">
+                            Scientists have made a major discovery that could revolutionize technology as we know it.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:underline font-semibold text-sm">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 3 -->
+                <div class="article-card rounded-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/800x600/2dd4bf/f8fafc?text=Economy" alt="Article Image">
+                    <div class="p-6">
+                        <span class="inline-block tag-economy text-white text-xs font-semibold px-2 py-1 rounded-full mb-2">ECONOMY</span>
+                        <h3 class="text-xl font-bold text-gray-800 leading-tight mb-2">
+                            The New Global Financial Order
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-normal mb-4">
+                            An in-depth analysis of the factors reshaping the global economic landscape.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:underline font-semibold text-sm">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- BLOCK START: Gemini-powered Article Generator Card -->
+                <div id="gemini-card" class="article-card rounded-lg overflow-hidden flex flex-col items-center justify-center p-6 text-center">
+                    <h3 class="text-xl font-bold text-gray-800 leading-tight mb-4">
+                        Generate a New Article with Gemini AI ✨
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Enter a topic below to generate a new article headline and summary.
+                    </p>
+                    <input type="text" id="article-prompt" class="w-full p-2 mb-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., The rise of sustainable fashion">
+                    <button id="generate-btn" class="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                        Generate Article ✨
+                    </button>
+                    <div id="loading-spinner" class="mt-4 hidden">
+                        <svg class="animate-spin h-8 w-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </div>
+                    <div id="generated-content" class="mt-4 hidden w-full">
+                        <h4 id="generated-headline" class="text-lg font-bold text-gray-800 leading-tight mb-2"></h4>
+                        <p id="generated-summary" class="text-sm text-gray-600 leading-normal mb-4"></p>
+                    </div>
+                </div>
+                <!-- BLOCK END: Gemini-powered Article Generator Card -->
+            </div>
+        </div>
+    </main>
+    <!-- BLOCK END: Main Content Area -->
+
+    <!-- BLOCK START: Footer Section -->
+    <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 FreeState Press. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- BLOCK END: Footer Section -->
+
+</body>
+
+<!-- BLOCK START: JavaScript Section -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const generateBtn = document.getElementById('generate-btn');
+        const articlePromptInput = document.getElementById('article-prompt');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const generatedContent = document.getElementById('generated-content');
+        const generatedHeadline = document.getElementById('generated-headline');
+        const generatedSummary = document.getElementById('generated-summary');
+
+        const apiKey = "";
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+        generateBtn.addEventListener('click', async () => {
+            const userPrompt = articlePromptInput.value.trim();
+            if (!userPrompt) {
+                // Replaced alert with console.error as per instruction
+                console.error('Please enter a topic to generate an article.');
+                // Display user-friendly message on the UI
+                generatedHeadline.textContent = 'Please enter a topic.';
+                generatedSummary.textContent = '';
+                generatedContent.classList.remove('hidden');
+                return;
+            }
+
+            loadingSpinner.classList.remove('hidden');
+            generatedContent.classList.add('hidden');
+
+            const systemPrompt = "You are a world-class journalist. Given a topic, generate a catchy, concise headline (10 words max) and a single-paragraph summary (50 words max) of an article. The summary should be informative and engaging. Provide the response as a JSON object with 'headline' and 'summary' keys.";
+            
+            const payload = {
+                contents: [{ parts: [{ text: `Generate a headline and summary for an article about: ${userPrompt}` }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "headline": { "type": "STRING" },
+                            "summary": { "type": "STRING" }
+                        },
+                        "propertyOrdering": ["headline", "summary"]
+                    }
+                }
+            };
+
+            let retries = 0;
+            const maxRetries = 5;
+            const delay = (ms) => new Promise(res => setTimeout(res, ms));
+
+            const callApi = async () => {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        if (response.status === 429 && retries < maxRetries) {
+                            retries++;
+                            const backoffTime = Math.pow(2, retries) * 1000;
+                            await delay(backoffTime);
+                            return callApi();
+                        }
+                        throw new Error(`API call failed with status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    const candidate = result.candidates?.[0];
+
+                    if (candidate && candidate.content?.parts?.[0]?.text) {
+                        const jsonText = candidate.content.parts[0].text;
+                        const data = JSON.parse(jsonText);
+                        generatedHeadline.textContent = data.headline;
+                        generatedSummary.textContent = data.summary;
+                        generatedContent.classList.remove('hidden');
+                    } else {
+                        throw new Error('Invalid API response format.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    generatedHeadline.textContent = 'Error generating content.';
+                    generatedSummary.textContent = 'Please try again.';
+                    generatedContent.classList.remove('hidden');
+                } finally {
+                    loadingSpinner.classList.add('hidden');
+                }
+            };
+            
+            await callApi();
+        });
+    });
+</script>
+<!-- BLOCK END: JavaScript Section -->
+</html>
