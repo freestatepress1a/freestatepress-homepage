@@ -14,6 +14,7 @@
             background-color: #f9fafb;
         }
         
+        
         h1, h2, h3, h4 {
             font-family: 'Roboto Slab', serif;
         }
@@ -234,7 +235,9 @@
         const generatedHeadline = document.getElementById('generated-headline');
         const generatedSummary = document.getElementById('generated-summary');
 
-        const apiKey = "";
+        // IMPORTANT: Paste your API key here to enable Gemini AI functionality.
+        // Get your key from Google AI Studio: https://aistudio.google.com/app/apikey
+        const apiKey = "AIzaSyA4lNwNMrcxKnuSNz67IHXF2fCnxe0UYYo";
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
         generateBtn.addEventListener('click', async () => {
@@ -322,4 +325,3 @@
 </script>
 <!-- BLOCK END: JavaScript Section -->
 </html>
-
